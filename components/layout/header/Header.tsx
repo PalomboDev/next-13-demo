@@ -9,6 +9,7 @@ export default function Header(): ReactElement {
             <HeaderItem label={"Albums"} href={"/albums"} />
             <HeaderItem label={"Comments"} href={"/comments"} />
             <HeaderItem label={"Diagram"} href={"/diagram"} />
+            <HeaderItem label={"Static Generated"} href={"/static-generated"} />
         </header>
     );
 }
