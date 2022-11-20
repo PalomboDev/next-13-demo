@@ -10,7 +10,7 @@ type CommentProps = {
 
 export default async function Comment({ params }: CommentProps) {
     const { id } = params;
-    const comment: Comment = await fetch(`http://localhost:3000/api/comments/${id}`).then(data => data.json());
+    const comment: Comment = await fetch(`https://jsonplaceholder.typicode.com/comments/${id}`).then(data => data.json());
 
     return (
         <div>

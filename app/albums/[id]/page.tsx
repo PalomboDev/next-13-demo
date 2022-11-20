@@ -18,7 +18,7 @@ export default function Album({ params }: AlbumProps) {
     const [album, setAlbum] = useState<Album | undefined>(undefined);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/api/albums/${id}`)
+        fetch(`https://jsonplaceholder.typicode.com/albums/${id}`)
             .then(data => data.json())
             .then(data => setAlbum(data))
             .catch(console.error);

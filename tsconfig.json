@@ -19,7 +19,7 @@
         "name": "next"
       }
     ],
-    "sourceRoot": ".",
+    "baseUrl": ".",
     "paths": {
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"]

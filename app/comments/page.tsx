@@ -10,7 +10,7 @@ export default function Comments() {
     const [comments, setComments] = useState<Comment[] | undefined>(undefined);
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/comments")
+        fetch("https://jsonplaceholder.typicode.com/comments")
             .then(data => data.json())
             .then(data => setComments(data))
             .catch(console.error);
