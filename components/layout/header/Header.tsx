@@ -9,7 +9,10 @@ export default function Header(): ReactElement {
             <HeaderItem label={"Albums"} href={"/albums"} />
             <HeaderItem label={"Comments"} href={"/comments"} />
             <HeaderItem label={"Diagram"} href={"/diagram"} />
+            <HeaderItem label={"Revalidate"} href={"/revalidate"} />
             <HeaderItem label={"Static Generated"} href={"/static-generated"} />
+            <HeaderItem label={"Loading"} href={"/loading"} />
+            {/*<HeaderItem label={"Error"} href={"/error"} />*/}
         </header>
     );
 }

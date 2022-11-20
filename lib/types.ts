@@ -88,3 +88,7 @@ export type Time = {
     utc_offset: string;
     week_number: number;
 };
+
+export type DogFact = {
+    fact: string;
+};

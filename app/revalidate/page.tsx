@@ -2,18 +2,18 @@ import type { Time } from "@lib/types";
 
 import CodeBlock from "@components/CodeBlock";
 
-export default async function StaticGenerated() {
-    const time: Time = await fetch("https://worldtimeapi.org/api/timezone/America/Chicago", { cache: "force-cache" })
+export default async function Loading() {
+    const time: Time = await fetch("https://worldtimeapi.org/api/timezone/America/Chicago", { next: { revalidate: 30 } } )
         .then(data => data.json());
     const dateTime: Date = new Date(time.datetime);
 
     return (
         <div className={"text-5xl text-white text-center mt-5"}>
-            <div className={"text-2xl mb-5"}>This page was statically generated (on build time) at:</div>
+            <div className={"text-2xl"}>This page's data is cached and revalidated every 30 seconds</div>
 
             <div className={"my-10"}>
                 <CodeBlock
-                    code={"fetch(\"https://worldtimeapi.org/api/timezone/America/Chicago\", { cache: \"force-cache\" })"}
+                    code={"fetch(\"https://worldtimeapi.org/api/timezone/America/Chicago\", { next: { revalidate: 30 } } )"}
                 />
             </div>
 
